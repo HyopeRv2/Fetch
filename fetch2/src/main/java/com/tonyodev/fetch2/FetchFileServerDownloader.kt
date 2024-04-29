@@ -191,7 +191,7 @@ open class FetchFileServerDownloader @JvmOverloads constructor(
                     disconnect(response)
                     throw Exception(FETCH_FILE_SERVER_INVALID_RESPONSE_TYPE)
                 }
-                val bufferSize = 1024
+                val bufferSize = 10240
                 val buffer = CharArray(bufferSize)
                 val stringBuilder = StringBuilder()
                 val inputReader = InputStreamReader(response.byteStream, Charsets.UTF_8)
